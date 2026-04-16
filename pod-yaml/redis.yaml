@@ -12,3 +12,4 @@ spec:
   dnsPolicy: ClusterFirst
   restartPolicy: Always
 status: {}
+# kubectl run redis --image=redis --dry-run=client -o yaml > redis.yaml
