@@ -18,9 +18,11 @@ spec:
             image: nginx
             ports:
               - containerPort: 80
-  replicas: 3
+  replicas: 6
   selector:
     matchLabels:
       app: myapp
       type: frontend
+
+# kubectl scale --replicas=6 -f ./replica-set-or-controller-yaml/replicaset-definition.yaml
     
