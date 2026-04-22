@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: myapp-container
-        image: nginx:latest
+        image: nginx:1.25:err
         ports:
           - containerPort: 80
   replicas: 3
@@ -23,3 +23,6 @@ spec:
     matchLabels:
       app: myapp
       type: frontend
+
+# kubectl set image deployment myapp-deployment myapp-container=nginx:1.25
+# kubectl rollout undo deployment myapp-deployment --to-revision=2
